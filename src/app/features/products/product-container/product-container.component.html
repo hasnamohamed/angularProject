@@ -1,0 +1,9 @@
+<div class="container">
+<app-product-filter class="filters"></app-product-filter>
+  <section class="item-listing">
+    <app-product-tools class="item-listing__tools"></app-product-tools>
+    <app-product-list (itemAddedFromProductListComponent)="onItemAdded($event)" class="item-listing__items item-listing--3items"></app-product-list>
+    <!-- paging -->
+    <app-product-paging class="paging"></app-product-paging>
+  </section>
+</div>

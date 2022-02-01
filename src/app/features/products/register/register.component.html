@@ -1,0 +1,30 @@
+<!-- Register -->
+<div class="container">
+    <form class="login">
+        <h4 class="login__header">
+            Register An Account
+        </h4>
+        <div class="form-group">
+            <label for="">E-mail Address</label>
+            <input class="form-control" type="text" name="" id="">
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="">Password</label>
+                <input class="form-control" type="text" name="" id="">
+            </div>
+            <div class="form-group">
+                <label for="">Re-enter Password</label>
+                <input class="form-control" type="text" name="" id="">
+            </div>
+        </div>
+
+        <div class="login__remember-me">
+            <div class="add-product__actions">
+                <button href="#" class="btn btn--gray">Cancel</button>
+                <button [routerLink]="'/register'" class="btn btn--primary">Register</button>
+            </div>
+        </div>
+        <a [routerLink]="'/login'" class="login__register-now">You are alredy a member?</a>
+    </form>
+</div>

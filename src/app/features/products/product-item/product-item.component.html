@@ -1,0 +1,18 @@
+    <div class="item-medium-1__alert" *ngIf="productItem.discount">Sale</div>
+    <div class="item-medium-1__image image" [style]="'background-image: url'+ '(' + productItem.imageUrls +')'">
+        <a (click)="onAddToCardPress()" class="item-medium-1__action"  >Add to Cart</a>
+    </div>
+    <a [routerLink]="'/product/details/'+productItem._id" [queryParams]="{name:productItem.data[0].name}">
+        <h4>{{productItem.data[0].name}}</h4>
+        <div class="flex-row">
+            <div>
+                <del *ngIf="productItem.discount">${{productItem.price }}</del>
+                <span class="lable">${{  productItem.price }}</span> <!--productItem.discount?productItem.discount-productItem.price :-->
+            </div>
+        </div>
+    </a>
+    <div class="crud-actions">
+        <a href="#"><i class="far fa-eye"></i></a>
+        <a href="#"><i class="fas fa-edit"></i></a>
+        <a href="#"><i class="fas fa-trash-alt"></i></a>
+    </div>
